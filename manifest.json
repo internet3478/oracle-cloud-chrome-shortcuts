@@ -1,0 +1,24 @@
+{
+
+  "manifest_version": 2,
+  "name": "Oracle Cloud Shortcuts",
+  "version": "1.0.0.7",
+  "description": "Add up to 9 shortcuts to automate frequently accessed pages faster than clicking manually.",
+  
+  "icons": { 
+           "48": "icon48.png",
+          "128": "icon128.png" },
+  "content_scripts": [
+    {
+      "matches": ["*://*.oraclecloud.com/*", "*://*.oracledemos.com/*"],
+      "js": ["hcm.js"]
+    }
+  ],
+    "options_ui": {
+    "page": "options.html"
+  },
+    "permissions": [
+        "storage"
+    ],
+	"web_accessible_resources":["spinner.gif"]
+}
